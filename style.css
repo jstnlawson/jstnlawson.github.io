@@ -4,3 +4,14 @@ body {
   font-family: Arial;
   margin: 10% 5%;
 }
+h3 {
+  text-transform: uppercase;
+  color: #35b5ac
+}
+a  {
+  color: #35b5ac
+}
+.expsubhead {
+  font-weight: bold;
+  
+}
