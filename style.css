@@ -1,17 +1,74 @@
-body {
-  background-color: #faf9f7;
-  color: #090806;
-  font-family: Arial;
-  margin: 10% 10%;
+.frame {
+  margin: 0% 20% 0% 20%;
+  padding: 2px;
+  width: 234px;
+  background-color: #57c3bc69;
 }
-h3 {
-  text-transform: uppercase;
-  color: #35b5ac
+
+.mainlogo {
+  height: 1.5em;
 }
-a  {
-  color: #35b5ac
+.logobullet {
+  height: 0.65em;
 }
-.expsubhead {
-  font-weight: bold;
+
+.contact {
+  text-align: right;
+  padding-right: 40px;
+}
+
+.email {
+  color: #3F434A;
   
+}
+
+.leftcolumn {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.rightcolumn {
+  float: right;
+  width: 50%;
+  margin-left: 5%;
+  padding-left: 5%;
+  border-left: solid #3F434A;
+  border-left-style: double;
+}
+main {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+ 
+}
+
+h1 {
+ 
+  color: #3F434A;
+  font-size: 7em;
+  width: auto;
+  padding: 40px;
+  margin: 0%;
+  font-variant: small-caps;
+  
+}
+
+article {
+  margin: 0% 10% 60% 10%;
+  
+}
+
+
+h3 {
+  color: #3AB5AC;
+  
+  
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  text-size-adjust: auto;
+  padding-bottom: 10%;
 }
