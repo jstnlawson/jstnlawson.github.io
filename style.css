@@ -42,7 +42,7 @@ li {
 }
 .emptybox1 {
     grid-area: 1 / 1 / span 3 / span 2;
-    min-width: none;
+    min-width: 0%;
 }
 
 .intro {
