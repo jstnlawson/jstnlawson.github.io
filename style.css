@@ -84,7 +84,8 @@ h1 {
     margin: 0%;
     font-variant: small-caps;
     font-weight: 540;
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact {
