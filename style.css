@@ -46,7 +46,7 @@ li {
 } */
 
 .intro {
-    
+    display: grid;
     grid-area: 1 / 3 / span 3 / span 7;
     
 }
@@ -77,9 +77,10 @@ li {
 }
 
 h1 {
+    
     text-align: left;
     color: #3F434A;
-    font-size: 7em;
+    font-size: 12.9vw;
     padding: 40px;
     margin: 0%;
     font-variant: small-caps;
@@ -89,9 +90,11 @@ h1 {
 }
 
 .contact {
-    float: left;
+    /*float: left;
     width: 130%;
-    padding-left: 20%;
+    padding-left: 20%;*/
+    color: #3F434A;
+    opacity: 60%;
 }
 
 a {
