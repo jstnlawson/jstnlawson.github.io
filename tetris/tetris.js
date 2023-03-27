@@ -13,6 +13,7 @@ specific ref #*/
 
 const scoreDisplay = document.querySelector("#score")
 const startBtn = document.querySelector("#start-button")
+const pauseBtn = document.querySelector("#pause-button")
 const width = 10
 let nextRandom = 0
 let timerId
@@ -134,20 +135,64 @@ Basically, it's an array with a bunch of values and you apply logic
 function control(e) {
     if(e.keyCode === 37) {
         moveLeft()
+        sfx.leftArrow.play()
     } else if (e.keyCode === 38) {
         rotate()
+        sfx.upArrow.play()
     } else if (e.keyCode === 39) {
         moveRight()
+        sfx.rightArrow.play()
     } else if (e.keyCode === 40) {
         moveDown()
+        document.getElementById('g').play()
     }
 }
 document.addEventListener("keydown", control)
+
+let player = null
 
 /* control(e): The "e" is for "event". If the key that equals 37 is pressed the 
 shape will moveLeft() 
 
 the "addEventListener" listens for a "keyup" event and evokes the control function*/
+
+var sfx = {
+
+    leftArrow: new Howl({
+        src: [
+            "./audio/a.mp3"
+        ]
+    }),
+
+    upArrow: new Howl({
+        src: [
+            "./audio/b.mp3"
+        ]
+    }),
+
+    rightArrow: new Howl({
+        src: [
+            "./audio/c.mp3"
+        ]
+    }),
+
+    downArrow: new Howl({
+        src: [
+            "./audio/g.mp3"
+        ]
+    }),
+    playSound: new Howl({
+        src: [
+            "./audio/start.mp3"
+        ]
+    }),
+    pauseSound: new Howl({
+        src: [
+            "./audio/pause.mp3"
+        ]
+    })
+    
+}
 
 function moveDown() {
     undraw()
@@ -263,20 +308,78 @@ function displayShape() {
 
 //button function
 startBtn.addEventListener("click", () => {
+    
+    function startOpacity0(){
+    let startButton = document.getElementById("start-button");
+    startButton.style.opacity = "0";}
+
+    function startOpacity1(){
+        let startButton = document.getElementById("start-button");
+        startButton.style.opacity = "1";}
+
+    function pauseOpacity1(){
+        let pauseButton = document.getElementById("pause-button");
+        pauseButton.style.opacity = "1";}
+
+    function pauseOpacity0(){
+        let pauseButton = document.getElementById("pause-button");
+        pauseButton.style.opacity = "0";}
+
     if (timerId) {
         clearInterval(timerId)
         timerId = null
-        document.querySelector('#start-button').innerHTML = 'play'
+        document.getElementById("backgroundMusic").pause()
+        pauseOpacity0()
+        startOpacity1()
+        sfx.pauseSound.play()
     } else {
         draw()
         timerId = setInterval(moveDown, 1000)
         nextRandom = Math.floor(Math.random()*theTetrominoes.length)
         displayShape()
-        document.querySelector('#start-button').innerHTML = 'pause'
+        document.getElementById("backgroundMusic").play()
+        startOpacity0()
+        pauseOpacity1()
+        sfx.playSound.play()
     }
 })
 
+pauseBtn.addEventListener("click", () => {
+    
+    function startOpacity0(){
+    let startButton = document.getElementById("start-button");
+    startButton.style.opacity = "0";}
 
+    function startOpacity1(){
+        let startButton = document.getElementById("start-button");
+        startButton.style.opacity = "1";}
+
+    function pauseOpacity1(){
+        let pauseButton = document.getElementById("pause-button");
+        pauseButton.style.opacity = "1";}
+
+    function pauseOpacity0(){
+        let pauseButton = document.getElementById("pause-button");
+        pauseButton.style.opacity = "0";}
+
+    if (timerId) {
+        clearInterval(timerId)
+        timerId = null
+        document.getElementById("backgroundMusic").pause()
+        pauseOpacity0()
+        startOpacity1()
+        sfx.pauseSound.play()
+    } else {
+        draw()
+        timerId = setInterval(moveDown, 1000)
+        nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+        displayShape()
+        document.getElementById("backgroundMusic").play()
+        startOpacity0()
+        pauseOpacity1()
+        sfx.playSound.play()
+    }
+})
 
 
 
@@ -297,6 +400,41 @@ array.splice(1)
 concat(): adds an array
 
 appendChild: append (add) element to existing element*/
+
+const audio = document.getElementById("backgroundMusic")
+audio.volume = 0.2
+
+
+/*
+const g = document.getElementById("g")
+const a = document.getElementById("a")
+const b = document.getElementById("b")
+const c = document.getElementById("c")
+const d = document.getElementById("d")
+const e = document.getElementById("e")
+const fs = document.getElementById("fs")
+
+const audioArray = [g, a, b, c, d, e, fs];
+
+function playArray() {
+    let i=0;
+    let lastPlayedFile = null;
+    if(lastPlayedFile !== null) {
+     lastPlayedFile[0].currentTime = 0;
+     lastPlayedFile.trigger('pause'); 
+  }
+    if (i< audioArray.length){
+     lastPlayedFile = audioArray[i];
+     audioArray[i].trigger('play');
+     i++;
+  } else if (i>=audioArray.length){
+     i = 0;
+     lastPlayedFile = audioArray[0];
+     audioArray[i].trigger('play');
+  }
+}; */
+
+
 
 //add score
 function addScore() {
@@ -329,7 +467,7 @@ function addScore() {
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
     //if any part of the shape is in the starting index postion
-      scoreDisplay.innerHTML = 'end'
+      scoreDisplay.innerHTML = 'hoot! You are dead now.'
       //change the dispaly to "end"
       clearInterval(timerId)
       //stop the the game
