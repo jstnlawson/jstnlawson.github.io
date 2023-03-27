@@ -2,12 +2,22 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <script src="tetris.js"></script>
+    
     <link rel="stylesheet" href="tetris.css">
     <title>TetrisWithBasicJs</title>
 </head>
 <body>
+    
+    
     <div class="container">
+
+        <div class="left-button">
+            <button id="start-button" onclick="startOpacity" title="How to play: Use direction arrows to move shapes, the up arrow rotates the shape.">
+            </button>
+            <button id="pause-button" title="How to play: Use direction arrows to move shapes, the up arrow rotates the shape.">
+            </button>
+        </div>
+
         <div class="grid">
             <div class="gameboard"></div>
             <div class="gameboard"></div>
@@ -209,20 +219,21 @@
             <div class="gameboard"></div>
             <div class="gameboard"></div>                
             <div class="gameboard"></div>
-            <button id="start-button">play</button>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
-            <div class="taken"></div>
             
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
+            <div class="taken"></div>
         </div>
-    
+        
+        
+
         <div class="mini-grid">
             <div></div>
             <div></div>
@@ -240,9 +251,14 @@
             <div></div>
             <div></div>
             <div></div>
-            <h3>score:<span id="score"> 0</span></h3>
+            <h3>$<span id="score"></span></h3>
         </div>
     </div>
-    
+    <audio loop id="backgroundMusic" src="./audio/instrumentalSWRSmstr.mp3" type="audio/mpeg" preload="auto"></audio>
+    <audio  id="g" style="display:none" src="./audio/g.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+    <!--add "controls" after "audio" for a music controller, no quotes.-->
+    <script src="howler.min.js"></script>
+    <script src="tetris.js"></script>
 </body>
 </html>
