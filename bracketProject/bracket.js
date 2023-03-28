@@ -19,6 +19,7 @@ displayOut = () => {
     let input = document.getElementById("box1").value;
     let text2 = document.getElementById("box3");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -33,6 +34,7 @@ displayOutTwo = () => {
     let input = document.getElementById("box2").value;
     let text2 = document.getElementById("box4");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -43,6 +45,7 @@ displayOutThree = () => {
     let input = document.getElementById("box3").value;
     let text2 = document.getElementById("box7");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -53,6 +56,7 @@ displayOutFour = () => {
     let input = document.getElementById("box4").value;
     let text2 = document.getElementById("box8");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -63,6 +67,7 @@ displayOutFive = () => {
     let input = document.getElementById("box5").value;
     let text2 = document.getElementById("box3");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -73,6 +78,7 @@ displayOutSix = () => {
     let input = document.getElementById("box6").value;
     let text2 = document.getElementById("box4");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -83,6 +89,7 @@ displayOutSeven = () => {
     let input = document.getElementById("box7").value;
     let text2 = document.getElementById("boxWin");
     text2.value = `${input} wins!`;
+    sfx.theChamp.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -93,6 +100,7 @@ displayOutEight = () => {
     let input = document.getElementById("box8").value;
     let text2 = document.getElementById("boxWin");
     text2.value = `${input} wins!`;
+    sfx.theChamp.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -103,6 +111,7 @@ displayOutNine = () => {
     let input = document.getElementById("box9").value;
     let text2 = document.getElementById("box11");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -113,6 +122,7 @@ displayOutTen = () => {
     let input = document.getElementById("box10").value;
     let text2 = document.getElementById("box12");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -123,6 +133,7 @@ displayOutEleven = () => {
     let input = document.getElementById("box11").value;
     let text2 = document.getElementById("box7");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -133,6 +144,7 @@ displayOutTwelve = () => {
     let input = document.getElementById("box12").value;
     let text2 = document.getElementById("box8");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -143,6 +155,7 @@ displayOutThirteen = () => {
     let input = document.getElementById("box13").value;
     let text2 = document.getElementById("box11");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
@@ -153,8 +166,25 @@ displayOutFourteen = () => {
     let input = document.getElementById("box14").value;
     let text2 = document.getElementById("box12");
     text2.value = input;
+    sfx.theContender.play()
         if (input.length === 0) {
             alert("Please enter a valid input");
             return;
           }
+}
+
+var sfx = {
+
+    theChamp: new Howl({
+        src: [
+            "./bracketaudio/bigVictory.mp3"
+        ]
+    }),
+
+    theContender: new Howl({
+        src: [
+            "./bracketaudio/shortVictory.mp3"
+        ]
+    }),
+    
 }
