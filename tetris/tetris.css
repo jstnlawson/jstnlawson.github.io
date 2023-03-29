@@ -94,3 +94,11 @@ h3 {
     background-color: whitesmoke;
     border-color: #e97b73;
   }
+
+#instructions {
+    margin: 0;
+    padding: 5% 0 0 8%;
+    color: #3F434A;
+    font-variant: small-caps;
+    font-size: large;
+  }
