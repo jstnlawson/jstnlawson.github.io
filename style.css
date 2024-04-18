@@ -839,6 +839,12 @@ footer {
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px){
+    .power-button {
+        display: none;
+    }
+}
+
 .power-button-svg {
     width: 25px;
     height: 25px;
