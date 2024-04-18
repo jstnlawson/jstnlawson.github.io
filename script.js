@@ -7,27 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 100);
     };
 
-    function detectMobileDevice() {
-        let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    // function detectMobileDevice() {
+    //     let userAgent = navigator.userAgent || navigator.vendor || window.opera;
     
-        // Check for various mobile device indicators in the user agent string
-        if (/android/i.test(userAgent)) {
-            return "Android";
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            return "iOS";
-        } else if (/windows phone/i.test(userAgent)) {
-            return "Windows Phone";
-        } else {
-            return "Not mobile";
-        }
-    }
+    //     // Check for various mobile device indicators in the user agent string
+    //     if (/android/i.test(userAgent)) {
+    //         return "Android";
+    //     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    //         return "iOS";
+    //     } else if (/windows phone/i.test(userAgent)) {
+    //         return "Windows Phone";
+    //     } else {
+    //         return "Not mobile";
+    //     }
+    // }
     
-    window.onload = function() {
-        let deviceType = detectMobileDevice();
-        if (deviceType !== "Not mobile") {
-            alert("You are using a " + deviceType + ". Please note that performance might be affected on mobile devices.");
-        }
-    };
+    // window.onload = function() {
+    //     let deviceType = detectMobileDevice();
+    //     if (deviceType !== "Not mobile") {
+    //         alert("You are using a " + deviceType + ". Please note that performance might be affected on mobile devices.");
+    //     }
+    // };
     
     
   
@@ -472,14 +472,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const clickLight = document.querySelector(".click-light");
     const remote = document.querySelector(".remote-container");
   
-    let isScreenOn = false;
+    let isScreenOn = true;
   
     powerButton.addEventListener("click", () => {
       console.log("power button clicked");
-      // clickLight.style.opacity = "1";
-      // setTimeout(() => {
-      //   clickLight.style.opacity = "0";
-      // }, 250);
   
       isScreenOn = !isScreenOn;
   
@@ -494,8 +490,8 @@ document.addEventListener("DOMContentLoaded", function () {
         directionButtons.forEach((button) => {
           button.classList.add("power-on__direction-button");
         });
-        powerButton.classList.add("power-on__power-button");
-        powerButtonSVG.classList.add("power-on__power-button-svg");
+        powerButton.classList.remove("power-on__power-button");
+        powerButtonSVG.classList.remove("power-on__power-button-svg");
         linkButtonBackLight.classList.add("power-on__link-button");
         remote.style.opacity = 1;
         projectScreen.forEach((screen) => {
@@ -514,8 +510,8 @@ document.addEventListener("DOMContentLoaded", function () {
         directionButtons.forEach((button) => {
           button.classList.remove("power-on__direction-button");
         });
-        powerButton.classList.remove("power-on__power-button");
-        powerButtonSVG.classList.remove("power-on__power-button-svg");
+        powerButton.classList.add("power-on__power-button");
+        powerButtonSVG.classList.add("power-on__power-button-svg");
         linkButtonBackLight.classList.remove("power-on__link-button");
         remote.style.opacity = 0;
         setTimeout(() => {
