@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("screenSlide/skyScroll/script.js");
+
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 100);
+    };
+    
   
     let modal = document.getElementById('startModal');
       modal.classList.add('show');
