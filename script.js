@@ -6,13 +6,38 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo(0, 0);
         }, 100);
     };
+
+    function detectMobileDevice() {
+        let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+        // Check for various mobile device indicators in the user agent string
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        } else if (/windows phone/i.test(userAgent)) {
+            return "Windows Phone";
+        } else {
+            return "Not mobile";
+        }
+    }
+    
+    window.onload = function() {
+        let deviceType = detectMobileDevice();
+        if (deviceType !== "Not mobile") {
+            alert("You are using a " + deviceType + ". Please note that performance might be affected on mobile devices.");
+        }
+    };
+    
     
   
     let modal = document.getElementById('startModal');
       modal.classList.add('show');
+      document.body.classList.add('body-fixed');
   
       document.getElementById('startButton').addEventListener('click', function() {
         closeModal();
+        document.body.classList.remove('body-fixed');
     });
   
   

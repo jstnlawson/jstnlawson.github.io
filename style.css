@@ -38,6 +38,14 @@ body {
     padding: 0;
 }
 
+
+/* potential mobile setting */
+/* html {
+    width: 100%;
+    overflow-x: hidden;   
+} */
+
+
 h1,
 h2,
 h3,
@@ -63,6 +71,13 @@ p {
 
 .visible {
     opacity: 1;
+}
+
+.body-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .name-container {
@@ -620,6 +635,7 @@ p {
 .story__part-four {
     height: 100vh;
     width: 100vw;
+    background: transparent;
 }
 
 /*----------------------------------------------
