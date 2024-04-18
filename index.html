@@ -1,68 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>JustinResume</title>
-</head>
-
-<body>
-    <div class="parentgrid">
-        <!-- <div class="emptybox1"></div> -->
-        <div class="intro">
-            <div class="frame">
-                <h1>Justin<br>Lawson</h1>
-            </div>
-            <p class="contact"><a href="mailto: jstn.lawson@gmail.com">jstn.lawson@gmail.com</a> <img class="logobullet"
-                    src="./resumePhotos/resumelogo.png"> (612) 246-0052</p>
-        </div>
-
-        <div class="leftinfo">
-            <h3><img class="logobullet" src="./resumePhotos/resumelogo.png"> Qualifications</h3>
-            <ul>
-                <li>React, Redux, JavaScript, Html, CSS</li><br>
-                <li>Node, Express, Axios, Sagas, Postgres, AWS</li><br>
-                <li>Experience running a successfull construction business for ten years.</li> <br>
-                <li>Punctual, respectful, asset to the team</li>
-            </ul>
-            <br>
-            <h3><img class="logobullet" src="./resumePhotos/resumelogo.png"> Education</h3>
-            <h4>Prime Digital Academy</h4>
-            <p>Graduating September 2023</p>
-            <h4>Minneapolis College of Art and Design Continuing Studies</h4>
-            <p>Basic philosophy of modern furniture design and construction, focusing on design, drawing, building and
-                critique.
-        </div>
-        <div class="rightinfo">
-            <h3><img class="logobullet" src="./resumePhotos/resumelogo.png"> Projects</h3>
-            <h4><a href="https://fast-oasis-59176-b290032bbf92.herokuapp.com/#/user" target="blank">Meeboard</a>
-            </h4>
-            <p>Audio sampler where you record a sound that is sends the sound to different keys on a keyboard
-                and
-                plays them back at different pitches.</p>
-            <h4><a href="./bracketProject/bracket.html" target="blank">Bracket Game</a></h4>
-            <p>A tournament style bracket. Enter competitors in the outside brackets and click the button next
-                to the winner.</p>
-            <h4><a href="./scroll animations/scroll.html" target="blank">Tutorials</a>
-                <p>A page where screen shots of tutorials animate into view as you scroll down.</p>
-            <h3><img class="logobullet" src="./resumePhotos/resumelogo.png"> Experience</h3>
-            <h4>Owner and Operator<h4>
-                    <h5>Twin Town Floor Sanding <span style="color: #3F434A;">(2012-present)</span></h5>
-                    <p>Estimates, invoices, plan and design, install, refinish, repair. Handle insurance, licenses,
-                        taxes, and paperwork.</p>
-                    <h4>Hardwood Flooring Technician / Site Manager</h4>
-                    <h5>Earl’s Floor Sanding and Installation <span style="color: #3F434A;">(October 2005-2011)</span>
-                    </h5>
-                    <p>Installing, and refinish hardwood flooring. Installing stairs, trimwork. Managing job
-                        site—including keeping co-workers on task, scheduling workflow, maximizing productivity.</p>
-                   
-
-        </div>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Sky Scroll</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/bird.css" />
+    <link rel="stylesheet" type="text/css" href="./css/spaceship.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="howler.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Modal Structure -->
+    <div id="startModal" class="modal">
+      <div class="modal-content">
+        <button id="startButton" class="start-btn">
+          <span class="start-btn__inner">start</span>
+        </button>
+      </div>
     </div>
-    <img class="bottomlogo" src="./resumePhotos/resumelogo.png" alt="logo">
-</body>
 
+    <div class="name-container">
+      <h3>
+        justin lawson
+        <span class="divider"> | </span>
+        <span class="position-title">front end developer</span>
+      </h3>
+    </div>
+    <div class="sky-scroll">
+      <div class="sky sky__section-one">
+        <div class="story__part-one">
+          <button class="btn story__part-one--btn">projects</button>
+        </div>
+      </div>
+      <div class="sky sky__section-two"></div>
+      <div class="sky sky__section-three">
+        <!-- <div class="story story__part-two">
+          <h1 class="story-title">section 2</h1>
+          <p class="story-text">
+            I'm a front-end developer and I excel at some aspects of it.
+          </p>
+          <button class="btn story__part-two--btn">⬇</button>
+        </div> -->
+        <div class="cloud-one__container">
+          <div class="white-wisp--top"></div>
+          <div class="white-wisp--middle"></div>
+          <div class="white-wisp--bottom"></div>
+        </div>
+        <div class="bird">
+          <div class="bird-body"></div>
+          <div class="bird-head"></div>
+          <div class="bird-beak"></div>
+          <div class="bird-tail">
+            <!-- <div class="bird-tail__feather feather-one"></div> -->
+            <!-- <div class="bird-tail__feather feather-two"></div> -->
+            <div class="bird-tail__feather feather-three"></div>
+            <div class="bird-tail__feather feather-four"></div>
+            <div class="bird-tail__feather feather-five"></div>
+            <div class="bird-tail__feather feather-six"></div>
+            <div class="bird-tail__feather feather-seven"></div>
+            <!-- <div class="bird-tail__feather feather-eight"></div> -->
+            <!-- <div class="bird-tail__feather feather-nine"></div>  -->
+          </div>
+          <div class="bird-wing">
+            <div class="bird-wing__bicep"></div>
+            <div class="bird-wing__forearm"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sky sky__section-four">
+        <div class="cloud-one__container">
+          <div class="white-wisp--top"></div>
+          <div class="white-wisp--middle"></div>
+          <div class="white-wisp--bottom"></div>
+        </div>
+      </div>
+      <div class="sky sky__section-five">
+        <!-- <div class="story story__part-three">
+          <h1 class="story-title">section 3</h1>
+          <p class="story-text">I used to do other things.</p>
+          <button class="btn story__part-three--btn">⬇</button>
+        </div> -->
+      </div>
+      <div class="sun"></div>
+
+      <div class="space">
+        <!-- <div class="planet"></div> -->
+        <div class="planet-top"></div>
+
+        <div class="story__part-four">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="projects screen-off">
+                  <div class="projects__screen-content">
+                    <div class="projects__image-container nhf">
+                      <img src="images/nhf-logo.png" />
+                    </div>
+                    <div class="project-info">
+                      <a
+                        href="https://www.northhardwoodfloors.com/"
+                        target="blank"
+                        class="project-link nhf-link"
+                      >
+                        <h3 class="project-title">north</h3>
+                        <h3 class="project-title">hardwood</h3>
+                        <h3 class="project-title">floors</h3>
+                      </a>
+                      <div class="tech-stack">
+                        next.js | tailwind | nodemailer
+                      </div>
+                      <p class="project-description">
+                        A website for a flooring business that includes a quiz
+                        to help potential customers determine which service they
+                        need.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="projects screen-off">
+                  <div class="projects__screen-content">
+                    <div class="projects__image-container meyouzik">
+                      <img src="images/meyouzik.png" />
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title meyouzik-link">
+                        <a
+                          href="https://meyouzik-238a5c43b74c.herokuapp.com/"
+                          target="blank"
+                          class="project-link"
+                        >
+                          meyouzik
+                        </a>
+                      </h3>
+                      <div class="tech-stack">
+                        next.js | css | web audio api
+                      </div>
+                      <p class="project-description">
+                        A web-based audio recorder built in the style of a reel
+                        to reel tape recorder.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="projects screen-off">
+                  <div class="projects__screen-content">
+                    <div class="projects__image-container genderstanding">
+                      <img src="images/genderstanding-icon.png" />
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title genderstanding-link">
+                        <a
+                          href="https://github.com/Genderstanding/Genderstanding?tab=readme-ov-file"
+                          target="blank"
+                          class="project-link"
+                        >
+                          genderstanding
+                        </a>
+                      </h3>
+                      <div class="tech-stack">
+                        tailwind | redux-saga | react
+                      </div>
+                      <p class="project-description">
+                        A mobile first invite-only social media platform that
+                        provides a safe community space, allowing users to
+                        invite friends and family to ask questions anonymously.
+                        This was group project built for a client.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="projects screen-off">
+                  <div class="projects__screen-content">
+                    <div class="projects__image-container meeboard">
+                      <img src="images/meeboard-crop.png" />
+                    </div>
+                    <div class="project-info">
+                      <h3 class="project-title meeboard-link">
+                        <a
+                          href="https://fast-oasis-59176-b290032bbf92.herokuapp.com/#/user"
+                          target="blank"
+                          class="project-link"
+                        >
+                          meeboard
+                        </a>
+                      </h3>
+                      <div class="tech-stack">web audio api | react | css</div>
+                      <p class="project-description">
+                        An audio sampler that automatically tunes your recorded
+                        sound to different pitches on the keyboard.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-panel">
+              <button class="power-button">
+                <img class="power-button-svg" src="images/power-button.svg" />
+              </button>
+            </div>
+            <div class="click-light"></div>
+
+            <div class="remote-container">
+              <div class="direction-buttons__container">
+                <button class="direction-button direction-button--up">
+                  <span class="direction-button__inner"
+                    ><span class="button-up__text">sun</span></span
+                  >
+                </button>
+                <button class="direction-button direction-button--left">
+                  <span class="direction-button__inner">⏷</span>
+                </button>
+                <button class="direction-button direction-button--right">
+                  <span class="direction-button__inner">⏷</span>
+                </button>
+                <button
+                  class="direction-button direction-button--down story__part-four--btn"
+                >
+                  <span class="direction-button__inner"
+                    ><span class="contact-button__text">stars</span></span
+                  >
+                </button>
+                <div class="link-button__border">
+                  <div class="link-button__back-light"></div>
+
+                  <a
+                    href="#"
+                    target="_blank"
+                    id="link-button"
+                    class="link-button direction-button--center"
+                  >
+                    <!-- &#x1F517; -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="planet-bottom"></div>
+        <div class="space-sky">
+          <div class="black-cloud bc-one"></div>
+          <div class="black-cloud bc-two"></div>
+          <div class="black-cloud bc-three"></div>
+          <div class="black-cloud bc-four"></div>
+          <div class="black-cloud bc-five"></div>
+          <div class="black-cloud bc-six"></div>
+          <div class="black-cloud bc-seven"></div>
+          <div class="black-cloud bc-eight"></div>
+          <div class="black-cloud bc-nine"></div>
+          <div class="black-cloud bc-ten"></div>
+          <div class="black-cloud bc-eleven"></div>
+          <div class="black-cloud bc-twelve"></div>
+          <div class="white-wisp"></div>
+          <div class="green-wisp"></div>
+          <div class="space-ship hidden-ship">
+            <div class="engine-container">
+              <div class="space-ship__base"></div>
+              <div class="space-ship__left-engine">
+                <div class="fire-glow"></div>
+                <div class="space-ship__left-engine--fan-bg">
+                  <div class="space-ship__left-engine--fan"></div>
+                </div>
+              </div>
+              <div class="middle-engine__container">
+                <div class="fire-glow"></div>
+                <div class="space-ship__middle-engine--left"></div>
+                <div class="space-ship__middle-engine--right"></div>
+                <div class="space-ship__middle-engine--fan-bg">
+                  <div class="space-ship__middle-engine--fan"></div>
+                </div>
+                <div class="top-wing">
+                  <div class="top-wing__top"></div>
+                  <div class="top-wing__mid-one"></div>
+                  <div class="top-wing__mid-two"></div>
+                  <div class="top-wing__mid-three"></div>
+                  <div class="top-wing__base"></div>
+                </div>
+              </div>
+
+              <div class="space-ship__right-engine">
+                <div class="fire-glow"></div>
+                <div class="space-ship__right-engine--fan-bg">
+                  <div class="space-ship__right-engine--fan"></div>
+                </div>
+              </div>
+            </div>
+            <div class="space-ship__bottom"></div>
+            <div class="space-ship__body"></div>
+            <div class="space-ship__cock-pit">
+              <div class="space-ship__cock-pit--background-one">
+                <div class="space-ship__cock-pit--background-two"></div>
+              </div>
+              <div class="seat-rail__left"></div>
+              <div class="seat-rail__right"></div>
+              <div class="space-ship__cock-pit--seat-back"></div>
+              <div class="head-rest"></div>
+              <img class="me-torso" src="images/cropped-jstn.svg" />
+              <div class="sunglasses">
+                <div class="lenses">
+                  <div class="lenses-left"></div>
+                  <div class="lenses-right"></div>
+                </div>
+              </div>
+              <div class="windshield"></div>
+            </div>
+            <div class="spaceship__nose-container">
+              <div class="spaceship__nose-one"></div>
+              <div class="spaceship__nose-two"></div>
+            </div>
+            <div class="controls__container">
+              <div class="left-controls"></div>
+              <div class="right-controls"></div>
+            </div>
+            <div class="controls-front">
+              <div class="front-left"></div>
+              <div class="front-right"></div>
+            </div>
+            <div class="front-vent__container">
+              <div class="front-vent__border">
+                <div class="front-vent__vent"></div>
+              </div>
+            </div>
+
+            <div class="left-wing-container">
+              <div class="left-wing__connector"></div>
+              <div class="left-wing">
+                <div class="left-wing__stripe-one">- cssVIPER -</div>
+                <div class="left-wing__stripe-two"></div>
+                <div class="left-wing__overlay"></div>
+              </div>
+            </div>
+
+            <div class="right-wing-container">
+              <div class="right-wing__connector"></div>
+              <div class="right-wing">
+                <div class="right-wing__stripe-one">- cssVIPER -</div>
+                <div class="right-wing__stripe-two"></div>
+                <div class="right-wing__overlay"></div>
+              </div>
+            </div>
+            <div class="gun-box">
+              <div class="gun gun-one">
+                <div class="gun__barrel"></div>
+              </div>
+              <div class="gun gun-two">
+                <div class="gun__barrel"></div>
+              </div>
+            </div>
+            <div class="laser--one"></div>
+            <div class="laser--two"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__border-top"></div>
+      <div class="footer__border-bottom"></div>
+      <div class="footer__border-left"></div>
+      <div class="footer__border-right"></div>
+      <div class="footer-links">
+        <div>
+          <p class="footer-text">
+            <a href="https://www.linkedin.com/in/justin-lawson-732298281/"
+              >linkedin</a
+            >
+          </p>
+        </div>
+        <div>
+          <p class="footer-text">
+            <a href="https://github.com/jstnlawson" target="_blank">github</a>
+          </p>
+        </div>
+        <div>
+          <p class="footer-text">
+            <a href="mailto:jstn.lawson@gmail.com">email</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

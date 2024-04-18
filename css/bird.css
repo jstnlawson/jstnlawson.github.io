@@ -1,0 +1,150 @@
+/*------------------------------------------------
+    BIRD
+------------------------------------------------*/
+
+.bird {
+    position: relative;
+    top: -30%;
+    z-index: 2000;
+    transform: scale(0.3);
+    opacity: 0.5;
+}
+
+.bird-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+    height: 30px;
+    border-radius: 60% 20% 30% 60%;
+    background-color: black;
+
+}
+
+.bird-head {
+    position: absolute;
+    top: 5px;
+    left: 170px;
+    width: 40px;
+    height: 20px;
+    border-radius: 0 50% 10px 0;
+    background-color: black;
+    /* transform: translate(-50%, -50%); */
+}
+
+.bird-beak {
+    position: absolute;
+    top: 17px;
+    left: 202px;
+    width: 20px;
+    height: 8px;
+    background-color: black;
+    border-radius: 0 80% 0 0;
+    /* transform: rotate(45deg); */
+}
+
+.bird-tail {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    /* width: 28px;
+    height: 48px;
+    background-color: black; */
+    /* border-radius: 0 100% 100% 0; */
+    /* clip-path: polygon(50% 0%, 100% 100%, 0% 100%); */
+}
+
+.bird-tail__feather {
+    position: inherit;
+    width: 50px;
+    height: 5px;
+    left: 0;
+    border-radius: 80%;
+    background-color: black;
+}
+
+.feather-one {
+    top: 0px;
+    left: 0;
+    transform: rotate(20deg);
+}
+
+.feather-two {
+    top: 3px;
+    left: 0;
+    transform: rotate(15deg);
+}
+
+.feather-three {
+    top: 6px;
+    left: 0;
+    transform: rotate(10deg);
+}
+
+.feather-four {
+    top: 9px;
+    left: 0;
+    transform: rotate(5deg);
+
+}
+
+.feather-five {
+    top: 12px;
+    left: 0;
+}
+
+.feather-six {
+    top: 15px;
+    left: 0;
+    transform: rotate(-5deg);
+}
+
+.feather-seven {
+    top: 18px;
+    left: 0;
+    transform: rotate(-10deg);
+
+}
+
+.feather-eight {
+    top: 21px;
+    left: 0;
+    transform: rotate(-15deg);
+}
+
+.feather-nine {
+    top: 24px;
+    left: 0;
+    transform: rotate(-20deg);
+}
+
+.bird-wing {
+    position: inherit;
+    top: 25px;
+    left: 23px;
+    transform: rotate(-10deg);
+}
+
+.bird-wing__bicep {
+    position: absolute;
+    top: -15px;
+    left: 86px;
+    width: 60px;
+    height: 30px;
+    border-radius: 0 5px 0 0;
+    background-color: black;
+
+}
+
+.bird-wing__forearm {
+    position: absolute;
+    top: -152px;
+    left: 44px;
+    width: 80px;
+    height: 160px;
+    background-color: black;
+    /* border-radius: 50% 0 0 50%; */
+    /* clip-path: polygon(100% 100%, 100% 0%, 0% 0%); */
+    clip-path: polygon(115% 100%, 30% 85%, 0% 25%);
+    transform: rotate(-18deg);
+}
