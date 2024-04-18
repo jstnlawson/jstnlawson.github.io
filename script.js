@@ -6,30 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo(0, 0);
         }, 100);
     };
-
-    // function detectMobileDevice() {
-    //     let userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
-    //     // Check for various mobile device indicators in the user agent string
-    //     if (/android/i.test(userAgent)) {
-    //         return "Android";
-    //     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    //         return "iOS";
-    //     } else if (/windows phone/i.test(userAgent)) {
-    //         return "Windows Phone";
-    //     } else {
-    //         return "Not mobile";
-    //     }
-    // }
-    
-    // window.onload = function() {
-    //     let deviceType = detectMobileDevice();
-    //     if (deviceType !== "Not mobile") {
-    //         alert("You are using a " + deviceType + ". Please note that performance might be affected on mobile devices.");
-    //     }
-    // };
-    
-    
   
     let modal = document.getElementById('startModal');
       modal.classList.add('show');
@@ -66,10 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!soundAllowed) {
         // Check if sound has already been initialized
         sfx = {
-          pewPew: new Howl({
-            src: ["./audio/pew-pew.mp3"],
-            volume: 0.5,
-          }),
           breeze: new Howl({
             src: ["./audio/breeze.mp3"],
             volume: 0.5,
@@ -83,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }),
           projectsTheme: new Howl({
             src: ["./audio/projects-theme_mid-fi.mp3"],
-            // loop: true,
             volume: 0.2,
           }),
           shipApproach: new Howl({
@@ -98,12 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }),
           soundOfSpace: new Howl({
             src: ["./audio/sound-of-space.mp3"],
-            loop: true,
             volume: 0.2,
-          }),
-          whoosh: new Howl({
-            src: ["./audio/whoosh.mp3"],
-            volume: 0.5,
           }),
           laserCannon: new Howl({
             src: ["./audio/laser-cannon.mp3"],
