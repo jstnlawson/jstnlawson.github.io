@@ -999,6 +999,11 @@ footer {
     font-size: xx-large;
 }
 
+.direction-button:disabled {
+    opacity: 0.8; 
+  }
+  
+
 
 .power-on__direction-button {
     background: linear-gradient(to right, #8de9fd, #fff);
