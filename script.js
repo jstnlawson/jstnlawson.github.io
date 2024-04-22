@@ -304,10 +304,12 @@ document.addEventListener("DOMContentLoaded", function () {
               setTimeout(() => {
                 // sfx.pewPew.play();
                 // playPewPewSound();
-                leftLaser.style.display = "block";
-                animateLaser(".laser--one", 537, -281, "left", 305);
-                rightLaser.style.display = "block";
-                animateLaser(".laser--two", 537, -281, "right", 55);
+                // leftLaser.style.display = "block";
+                leftLaser.style.visibility = "visible";
+                animateLaser(".laser--one", 537, -363, "left", 305);
+                // rightLaser.style.display = "block";
+                rightLaser.style.visibility = "visible";
+                animateLaser(".laser--two", 537, -363, "right", 55);
                 gunBarrel.forEach((gunBarrel) => {
                   gunBarrel.classList.add("gun__barrel--active");
                 });
@@ -337,6 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     observer.observe(spaceShip);
   };
+  
 
   function animateLaser(
     laserClass,
@@ -365,7 +368,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (positionProperty === "left") {
         laser.style.top = `${initialTop - deltaY}px`;
         laser.style.left = `${initialPosition - deltaX}px`;
-      } else {
+
+      } 
+      if (positionProperty === "right") {
         laser.style.top = `${initialTop + deltaY}px`;
         laser.style.right = `${initialPosition - deltaX}px`;
       }
@@ -374,7 +379,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (
         parseInt(laser.style[positionProperty], 10) > -window.innerWidth &&
         parseInt(laser.style[positionProperty], 10) < window.innerWidth &&
-        parseInt(laser.style.top, 10) < window.innerHeight
+        parseInt(laser.style.top, 10) < window.innerHeight &&
+        parseInt(laser.style.top, 10) > -laser.offsetHeight // Added condition to check top boundary
+
       ) {
         requestAnimationFrame(step);
       }
@@ -486,16 +493,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 2000);
     }
   });
-
-  // directionButtons.forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     sfx.remoteClicks.play();
-  //     clickLight.style.opacity = "1";
-  //     setTimeout(() => {
-  //       clickLight.style.opacity = "0";
-  //     }, 250);
-  //   });
-  // });
 
   directionButtons.forEach((button) => {
     button.addEventListener("click", function () {
