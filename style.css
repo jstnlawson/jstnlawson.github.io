@@ -1021,6 +1021,10 @@ footer {
     background: linear-gradient(to right, #888, transparent);
 }
 
+.direction-button__inner:hover {
+    background: transparent;
+}
+
 .direction-button__inner:active {
     background: linear-gradient(to right, #88888890, transparent);
 }
@@ -1068,6 +1072,7 @@ footer {
     height: 60px;
     width: 60px;
     background: black;
+
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -1084,9 +1089,8 @@ footer {
     width: 30px;
     background: linear-gradient(to right, #aaecfb66, #fafafa66);
     background: linear-gradient(to right, #888, transparent);
-    border: 1px solid #5a95a28e;
 
-    background: linear-gradient(to right, #8de9fd, #fff);
+    /* background: linear-gradient(to right, #8de9fd, #fff); */
     cursor: pointer;
     border: 1px solid #eee;
 
@@ -1100,12 +1104,17 @@ footer {
 
 }
 
+.link-button:hover {
+    background: transparent;
+}
+
 .link-button__back-light {
 
     height: 30px;
     width: 30px;
     background: linear-gradient(to right, #aaecfb66, #fafafa66);
     background: linear-gradient(to right, #5a95a2, #555);
+    background: linear-gradient(to right, #8de9fd, #fff);
 
     border: 1px solid #5a95a28e;
     color: black;
@@ -1116,12 +1125,12 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-.power-on__link-button {
+/* .power-on__link-button {
     background: linear-gradient(to right, #c9f6ff7d, #ffffffb0);
     background: linear-gradient(to right, #8de9fd, #fff);
     cursor: pointer;
     border: 1px solid #eee;
-}
+} */
 
 .click-light {
     position: relative;
