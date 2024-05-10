@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const storyFourBtn = document.querySelector(".story__part-four--btn");
 
   storyOneBtn.addEventListener("click", () => {
+    sfx.remoteClicks.play();
     if (!sfx.breeze.playing() && !sfx.projectsTheme.playing()) {
       sfx.breeze.play();
       sfx.projectsTheme.play();
