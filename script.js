@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //   This is how howler.js is used to play audio on the page.
   //   The audio files are loaded and stored in an object and called within
-  //   other functions.
+  //   other functions. Sort of a local api for the audio.
 
   let soundAllowed = false;
   let sfx = {};
@@ -605,7 +605,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //  position. I didn't want to always see the footer so this function uses the
   //  getBoundingClientRect method to calculate the position of the footer relative to the
   //  viewport and adjusts the opacity of the footer based on the distance from the bottom
-  //  of the page. This creates a fade effect for the footer as the user scrolls down the page.
+  //  of the page. This creates a fade effect for the footer as the user scrolls to or away
+  //  from the footer.
 
   const footer = document.querySelector(".footer");
 

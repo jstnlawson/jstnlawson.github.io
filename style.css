@@ -892,6 +892,30 @@ footer {
     transition: opacity 2s ease-in-out;
 }
 
+.lasso {
+    background: linear-gradient(to bottom, #fff, #ffafbb);
+}
+
+.lasso-logo {
+    font-family: cursive;
+    font-size: 3.5rem;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.lasso-title__one {
+    color: #fff;
+}
+
+.lasso-title__two {
+    color: #fddce2;
+}
+
+.lasso-title__three {
+    color: #ffc0c9;
+}
+
 .meeboard {
     background: linear-gradient(to bottom, #ffffff, #dea6ae);
 }
@@ -1124,13 +1148,6 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-/* .power-on__link-button {
-    background: linear-gradient(to right, #c9f6ff7d, #ffffffb0);
-    background: linear-gradient(to right, #8de9fd, #fff);
-    cursor: pointer;
-    border: 1px solid #eee;
-} */
 
 .click-light {
     position: relative;
