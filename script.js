@@ -534,54 +534,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isScreenOn = true;
 
-  powerButton.addEventListener("click", () => {
-    console.log("power button clicked");
+  // powerButton.addEventListener("click", () => {
+  //   console.log("power button clicked");
 
-    isScreenOn = !isScreenOn;
+  //   isScreenOn = !isScreenOn;
 
-    if (isScreenOn) {
-      sfx.clickOn.play();
-      projectImages.forEach((image) => {
-        image.style.opacity = 1;
-      });
-      projectInfos.forEach((info) => {
-        info.style.opacity = 1;
-      });
-      directionButtons.forEach((button) => {
-        button.classList.add("power-on__direction-button");
-      });
-      powerButton.classList.remove("power-on__power-button");
-      powerButtonSVG.classList.remove("power-on__power-button-svg");
-      linkButtonBackLight.classList.add("power-on__link-button");
-      remote.style.opacity = 1;
-      projectScreen.forEach((screen) => {
-        screen.classList.remove("screen-off");
-        screen.classList.add("screen-on");
-      });
-    } else {
-      // Turn all screens off
-      sfx.clickOff.play();
-      projectImages.forEach((image) => {
-        image.style.opacity = 0;
-      });
-      projectInfos.forEach((info) => {
-        info.style.opacity = 0;
-      });
-      directionButtons.forEach((button) => {
-        button.classList.remove("power-on__direction-button");
-      });
-      powerButton.classList.add("power-on__power-button");
-      powerButtonSVG.classList.add("power-on__power-button-svg");
-      linkButtonBackLight.classList.remove("power-on__link-button");
-      remote.style.opacity = 0;
-      setTimeout(() => {
-        projectScreen.forEach((screen) => {
-          screen.classList.remove("screen-on");
-          screen.classList.add("screen-off");
-        });
-      }, 2000);
-    }
-  });
+  //   if (isScreenOn) {
+  //     sfx.clickOn.play();
+  //     projectImages.forEach((image) => {
+  //       image.style.opacity = 1;
+  //     });
+  //     projectInfos.forEach((info) => {
+  //       info.style.opacity = 1;
+  //     });
+  //     directionButtons.forEach((button) => {
+  //       button.classList.add("power-on__direction-button");
+  //     });
+  //     powerButton.classList.remove("power-on__power-button");
+  //     powerButtonSVG.classList.remove("power-on__power-button-svg");
+  //     linkButtonBackLight.classList.add("power-on__link-button");
+  //     remote.style.opacity = 1;
+  //     projectScreen.forEach((screen) => {
+  //       screen.classList.remove("screen-off");
+  //       screen.classList.add("screen-on");
+  //     });
+  //   } else {
+  //     // Turn all screens off
+  //     sfx.clickOff.play();
+  //     projectImages.forEach((image) => {
+  //       image.style.opacity = 0;
+  //     });
+  //     projectInfos.forEach((info) => {
+  //       info.style.opacity = 0;
+  //     });
+  //     directionButtons.forEach((button) => {
+  //       button.classList.remove("power-on__direction-button");
+  //     });
+  //     powerButton.classList.add("power-on__power-button");
+  //     powerButtonSVG.classList.add("power-on__power-button-svg");
+  //     linkButtonBackLight.classList.remove("power-on__link-button");
+  //     remote.style.opacity = 0;
+  //     setTimeout(() => {
+  //       projectScreen.forEach((screen) => {
+  //         screen.classList.remove("screen-on");
+  //         screen.classList.add("screen-off");
+  //       });
+  //     }, 2000);
+  //   }
+  // });
 
   directionButtons.forEach((button) => {
     button.addEventListener("click", function () {

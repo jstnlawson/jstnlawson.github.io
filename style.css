@@ -813,7 +813,8 @@ footer {
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 50px;
+    height: fit-content;
+    padding-bottom: 20px;
     background: #000;
     background: linear-gradient(to bottom, #444, #111);
     box-sizing: border-box;
